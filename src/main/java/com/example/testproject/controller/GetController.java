@@ -1,6 +1,6 @@
 package com.example.testproject.controller;
 
-import com.example.testproject.DTO.MemberDTO;
+import com.example.testproject.dto.MemberDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -60,7 +60,7 @@ public class GetController {
     }
 
     @GetMapping("request3")
-    public String getRequestParam3(MemberDTO memberDTO) {
+    public String getRequestParam3(MemberDto memberDTO) {
         return memberDTO.toString();
     }
 }

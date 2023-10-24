@@ -1,6 +1,6 @@
 package com.example.testproject.controller;
 
-import com.example.testproject.DTO.MemberDTO;
+import com.example.testproject.dto.MemberDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -33,19 +33,19 @@ public class PutController {
 
     // api/v1/put-api/member2
     @PutMapping(value = "/member1")
-    public String postMemberDto1(@RequestBody MemberDTO memberDTO) {
+    public String postMemberDto1(@RequestBody MemberDto memberDTO) {
         return memberDTO.toString(); // toString 형태로 return
     }
 
     // api/v1/put-api/member2
     @PutMapping(value = "/member2")
-    public MemberDTO postMemberDto2(@RequestBody MemberDTO memberDTO) {
+    public MemberDto postMemberDto2(@RequestBody MemberDto memberDTO) {
         return memberDTO; // json 형태로 return
     }
 
     // api/v1/put-api/member2
     @PutMapping(value = "/member3")
-    public ResponseEntity<MemberDTO> postMemberDto3(@RequestBody MemberDTO memberDTO) {
+    public ResponseEntity<MemberDto> postMemberDto3(@RequestBody MemberDto memberDTO) {
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(memberDTO); // 202 응답
     }
 }

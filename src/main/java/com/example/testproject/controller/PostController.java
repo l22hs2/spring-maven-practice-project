@@ -1,6 +1,6 @@
 package com.example.testproject.controller;
 
-import com.example.testproject.DTO.MemberDTO;
+import com.example.testproject.dto.MemberDto;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,7 +32,7 @@ public class PostController {
 
     // api/v1/post-api/member2
     @PostMapping("member2")
-    public String postMemberDto(@RequestBody MemberDTO memberDTO) {
+    public String postMemberDto(@RequestBody MemberDto memberDTO) {
         return memberDTO.toString();
     }
 }

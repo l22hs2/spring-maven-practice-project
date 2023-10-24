@@ -7,5 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 // CRUD를 정의하는 영역
 
 // JpaRepository<레포지토리가 사용할 엔티티, Id(PK값)의 테이터 타입>
+// JpaRepository를 사용하면 @Repository을 붙이지 않아도 됨
 public interface ProductRepository extends JpaRepository<ProductEntity, String> {
 }
